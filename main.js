@@ -3,27 +3,27 @@ var buttonPink = document.getElementById('pinkButton');
 var buttonOrange = document.getElementById('orangeButton');
 var beforeTaxes = document.getElementById('beforeTax');
 var afterTaxes = document.getElementById('afterTax');
-var taxButton = document.getElementById('taxButton');
 var bluePressed = false;
 var pinkPressed = false;
 var orangePressed = false;
 var subtotal = 0;
 
-taxButton.addEventListener('click',function(){
-  var taxes = ((subtotal * .0625) + subtotal);
-  afterTaxes.innerHTML = taxes;
-})
+function taxes(calc){
+  return((calc * 1.0625).toFixed(2));
+}
 
 buttonBlue.addEventListener('click',function(){
   if(bluePressed===false){
       bluePressed = true;
       subtotal += 29;
       beforeTaxes.innerHTML = subtotal;
+      afterTaxes.innerHTML = taxes(subtotal);
   }
   else{
     bluePressed = false;
     subtotal -= 29;
     beforeTaxes.innerHTML = subtotal;
+    afterTaxes.innerHTML = taxes(subtotal);
   }
 })
 
@@ -32,11 +32,13 @@ buttonPink.addEventListener('click',function(){
       pinkPressed = true;
       subtotal += 19;
       beforeTaxes.innerHTML = subtotal;
+      afterTaxes.innerHTML = taxes(subtotal);
   }
   else{
     pinkPressed = false;
     subtotal -= 19;
     beforeTaxes.innerHTML = subtotal;
+    afterTaxes.innerHTML = taxes(subtotal);
   }
 })
 
@@ -45,10 +47,12 @@ buttonOrange.addEventListener('click',function(){
       orangePressed = true;
       subtotal += 38;
       beforeTaxes.innerHTML = subtotal;
+      afterTaxes.innerHTML = taxes(subtotal);
   }
   else{
     orangePressed = false;
     subtotal -= 38;
     beforeTaxes.innerHTML = subtotal;
+    afterTaxes.innerHTML = taxes(subtotal);
   }
 })

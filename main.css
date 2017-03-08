@@ -283,16 +283,9 @@ body{
 .prices{
   font-size: 20px;
   color: #5ca4d7;
-  margin-left: 10px;
+  margin-left: 30px;
 }
-#taxButton{
-  border: 2px solid #5ca4d7;
-  background-color: #fff;
-  color: #5ca4d7;
-}
-#taxButton:hover{
-  background-color: #31688f;
-}
+
 /*animation*/
 @keyframes fadein {
   0% {
