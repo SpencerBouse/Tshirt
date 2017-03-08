@@ -12,6 +12,9 @@
 
 <body>
     <main id="container">
+
+      <!--blue shirt-->
+
         <div class="outer">
             <div class="inner">
                 <div class="image">
@@ -61,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="options">
+                    <div id="blueButton" class="options">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -71,6 +74,8 @@
                 <h2 class="price">$29</h2>
             </div>
         </div>
+
+        <!--pink shirt-->
 
         <div class="outer">
             <div class="inner">
@@ -119,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="options">
+                    <div id="pinkButton" class="options">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -129,6 +134,8 @@
                 <h2 class="price">$19</h2>
             </div>
         </div>
+
+        <!--Orange shirt-->
 
         <div class="outer">
             <div class="inner">
@@ -179,7 +186,7 @@
                         </div>
                     </div>
 
-                    <div class="options">
+                    <div id="orangeButton" class="options">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -190,6 +197,14 @@
             </div>
         </div>
     </main>
+    <div class="prices">
+      <h3>Before tax: $<span id="beforeTax"></span></h3>
+      <h3>After tax: $<span id="afterTax"></span></h3>
+      <button id="taxButton">Calculate Tax</button>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+
 </body>
 
 </html>
